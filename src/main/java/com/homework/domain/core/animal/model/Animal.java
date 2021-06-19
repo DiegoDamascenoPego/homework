@@ -1,4 +1,4 @@
-package com.homework.domain.core.animal;
+package com.homework.domain.core.animal.model;
 
 import com.homework.domain.shared.Descricao;
 
