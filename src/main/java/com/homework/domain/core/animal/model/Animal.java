@@ -6,7 +6,10 @@ public class Animal {
 
     private final Descricao descricao;
 
-    public Animal(Descricao descricao) {
+    private final String sexo;
+
+    public Animal(Descricao descricao, String sexo) {
         this.descricao = descricao;
+        this.sexo = sexo;
     }
 }
