@@ -6,6 +6,9 @@ import com.homework.domain.core.animal.usecase.RegistrarAnimalUseCase;
 import com.homework.domain.core.sk.AnimalId;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
+import org.springframework.validation.annotation.Validated;
+
+import javax.validation.Valid;
 
 @RequiredArgsConstructor
 
@@ -15,7 +18,8 @@ public class AnimalAppService implements RegistrarAnimalUseCase {
     private final AnimalDomainRepository repository;
 
     @Override
-    public AnimalId handle(RegistrarAnimal command) {
+    @Validated
+    public AnimalId handle(@Valid RegistrarAnimal command) {
 
         Animal animal = Animal.builder()
                 .sexo(command.getSexo())

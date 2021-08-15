@@ -7,6 +7,8 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import javax.validation.Valid;
+
 import static com.homework.domain.core.animal.usecase.RegistrarAnimalUseCase.RegistrarAnimal;
 
 @AllArgsConstructor
@@ -18,7 +20,7 @@ public class AnimalController {
     private final RegistrarAnimalUseCase service;
 
     @PostMapping
-    public void registrarSimulacao(@RequestBody RegistrarAnimal command) {
+    public void registrar(@Valid @RequestBody RegistrarAnimal command) {
         service.handle(command);
     }
 
