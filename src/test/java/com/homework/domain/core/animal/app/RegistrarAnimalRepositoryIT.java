@@ -1,6 +1,5 @@
 package com.homework.domain.core.animal.app;
 
-import com.homework.domain.core.animal.IntegrationTest;
 import com.homework.domain.core.animal.model.Animal;
 import com.homework.domain.core.animal.model.Sexo;
 import com.homework.domain.core.animal.repository.AnimalDomainRepository;
@@ -10,7 +9,7 @@ import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
 
-@IntegrationTest
+@DataJpaTest
 public class RegistrarAnimalRepositoryIT {
 
     @Autowired
